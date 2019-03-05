@@ -11,6 +11,7 @@ function aStar(start, goal, board, height, width){
 
     let numSteps = 0
     while(openSet.length > 0){
+        numSteps++
         if(numSteps > 10000){
             console.log("STUCK")
         }

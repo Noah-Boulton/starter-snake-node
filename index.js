@@ -88,36 +88,36 @@ app.post('/move', async (request, response) => {
     }
     var move;
 
-    // if (needsFood && nearestFood) {
-    //   // console.log("food")
-    //   move = aStarHelper.aStar(snakeHead, nearestFood, board, dim, dim)
-    // } else if (OneVsOne) {
-    //   // console.log("1v1")
-    //   // console.log(snakes[1 - index].body[0])
-    //   move = aStarHelper.aStar(
-    //     snakeHead,
-    //     snakes[1 - index].body[0],
-    //     board,
-    //     dim,
-    //     dim
-    //   )
-    // } else {
-    //   // console.log("tail")
-    //   // console.log(req.you.body[req.you.body.length - 1])
-    //   move = aStarHelper.aStar(
-    //     snakeHead,
-    //     req.you.body[req.you.body.length - 1],
-    //     board,
-    //     dim,
-    //     dim
-    //   )
-    // }
-    // if(move != null){
-    //   var data = {
-    //     move: move, // one of: ['up','down','left','right']
-    //   }
-    //   return response.json(data)
-    // }
+    if (needsFood && nearestFood) {
+      // console.log("food")
+      move = aStarHelper.aStar(snakeHead, nearestFood, board, dim, dim)
+    } else if (OneVsOne) {
+      // console.log("1v1")
+      // console.log(snakes[1 - index].body[0])
+      move = aStarHelper.aStar(
+        snakeHead,
+        snakes[1 - index].body[0],
+        board,
+        dim,
+        dim
+      )
+    } else {
+      // console.log("tail")
+      // console.log(req.you.body[req.you.body.length - 1])
+      move = aStarHelper.aStar(
+        snakeHead,
+        req.you.body[req.you.body.length - 1],
+        board,
+        dim,
+        dim
+      )
+    }
+    if(move != null){
+      var data = {
+        move: move, // one of: ['up','down','left','right']
+      }
+      return response.json(data)
+    }
 
     if (OneVsOne) {
       // 1v1 time. We are king snek, actively kill the other snek

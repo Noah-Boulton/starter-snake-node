@@ -17,6 +17,10 @@ function aStar(start, goal, board, height, width){
     var from = {}
 
     while(openSet.size > 0){
+        if(openSet.size > height * width){
+            console.log("NOOOOOOOOOOO")
+            return null
+        }
         var current = getLowestScore(openSet, fScore);
         // check if we're done
         if(current === goalIndex){

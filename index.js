@@ -36,12 +36,10 @@ app.use(poweredByHandler)
 // Handle POST request to '/start'
 app.post('/start', (request, response) => {
   // NOTE: Do something here to start the game
-
   // Response data
   const data = {
     color: '#DFFF00',
   }
-
   return response.json(data)
 })
 
@@ -95,7 +93,7 @@ app.post('/move', async (request, response) => {
       move = aStarHelper.aStar(snakeHead, nearestFood, board, dim, dim)
     } else if (OneVsOne) {
       // console.log("1v1")
-      console.log(snakes[1 - index].body[0])
+      // console.log(snakes[1 - index].body[0])
       move = aStarHelper.aStar(
         snakeHead,
         snakes[1 - index].body[0],

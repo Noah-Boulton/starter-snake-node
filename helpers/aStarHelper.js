@@ -1,5 +1,5 @@
 function aStar(start, goal, board, height, width){
-    console.log(board)
+    // console.log(board)
     if(board[goal.x][goal.y] == 0){
         return null
     }

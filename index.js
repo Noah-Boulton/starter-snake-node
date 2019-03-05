@@ -81,14 +81,13 @@ app.post('/move', async (request, response) => {
     if(nearestFood != false){
       needsFood = foodHelper.needFood(req)
       if(req.you.body.length < req.board.height){
-        needsFood = true
+        // needsFood = true
       }
     } else {
       needsFood = false
     }
     var move;
-    needsFood = false
-    OneVsOne = false
+    
 
     if (needsFood && nearestFood) {
       // console.log("food")

@@ -9,7 +9,11 @@ function aStar(start, goal, board, height, width){
     s.g = 0
     openSet.push(s)
 
+    let numSteps = 0
     while(openSet.length > 0){
+        if(numSteps > 10000){
+            console.log("STUCK")
+        }
         // get lowsest score
         var nodeIndex = getLowestScore(openSet)
         var node = openSet[nodeIndex]

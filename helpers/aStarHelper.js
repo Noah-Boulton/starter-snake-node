@@ -10,7 +10,7 @@ function aStar(start, goal, board, height, width){
     openSet.push(s)
 
     while(openSet.length > 0){
-        if(openSet.length >= height*width){
+        if(openSet.length > height*width){
             console.log("WE GOT AN ERROR")
         }
         // get lowsest score

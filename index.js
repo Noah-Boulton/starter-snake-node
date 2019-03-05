@@ -17,7 +17,7 @@ const jsonHelper = require('./helpers/jsonHelper')
 const moveHelper = require('./helpers/moveHelper')
 const avoidHelper = require('./helpers/avoidHelper')
 const boardHeler = require('./helpers/boardHelper')
-var {timeout} = require('../helpers/timeoutHelper')
+const {timeout} = require('./helpers/timeoutHelper')
 const aStarHelper = require('./helpers/aStarHelper')
 
 
